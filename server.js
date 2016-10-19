@@ -1,8 +1,10 @@
-var user = require('./user');
+// module.exports = exports = this
+
+var User = require('./user');
 
 function run() {
-    var john = new user.User("John");
-    var frank = new user.User("Frank");
+    var john = new User("John");
+    var frank = new User("Frank");
 
     john.hello(frank);
 }

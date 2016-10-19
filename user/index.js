@@ -10,6 +10,9 @@ User.prototype.hello = function (who) {
 
 console.log("user.js is required");
 
-exports.User = User;
+// The exported object is a function User
 
-// console.log(module);
+module.exports = User;
+
+// exports.User = User;
+// this.User = User;

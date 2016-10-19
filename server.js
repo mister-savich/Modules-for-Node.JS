@@ -1,5 +1,6 @@
 // module.exports = exports = this
 
+var db = require('./db');
 var User = require('./user');
 
 function run() {
@@ -7,6 +8,7 @@ function run() {
     var frank = new User("Frank");
 
     john.hello(frank);
+    console.log(db.getPhrase("Run successful"));
 }
 
 if (module.parent) {

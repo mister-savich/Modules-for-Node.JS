@@ -1,9 +1,10 @@
 // module.exports = exports = this
 
-var db = require('db');
+var db = require('./db');
+var _ = require('lodash');
 db.connect();
 
-var log = require('logger')(module);
+var log = require('./logger')(module);
 
 var User = require('./user');
 

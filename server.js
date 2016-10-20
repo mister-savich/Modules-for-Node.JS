@@ -1,6 +1,10 @@
 // module.exports = exports = this
 
-var db = require('./db');
+var db = require('db');
+db.connect();
+
+var log = require('logger')(module);
+
 var User = require('./user');
 
 function run() {
@@ -8,7 +12,7 @@ function run() {
     var frank = new User("Frank");
 
     john.hello(frank);
-    console.log(db.getPhrase("Run successful"));
+    log(db.getPhrase("Run successful"));
 }
 
 if (module.parent) {
